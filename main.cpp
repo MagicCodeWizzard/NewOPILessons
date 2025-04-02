@@ -1,14 +1,13 @@
 #include <iostream>
 
 #include <thread>
+#include <chrono>
+#include <vector>
 
 void thread_func() {
   int counter = 0;
-  while(counter < 10) {
-    counter++;
-
-    std::this_thread::sleep_for(1000);
-  }
+  
+  _sleep(1000);
 }
 
 int main()
