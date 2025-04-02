@@ -1,6 +1,6 @@
 #include <iostream>
 
-#inculde "lib.cpp"
+#inculde "lib.hpp"
 
 int main()
 {
