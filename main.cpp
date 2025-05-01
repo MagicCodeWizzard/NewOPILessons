@@ -2,28 +2,21 @@
 
 #include <thread>
 #include <chrono>
+#include <vector>
 
-using std::chrono_literals;
-
-void thread_func() {
-  int counter = 0;
-  while(counter < 10) {
-    counter++;
-
-    std::cout << "Message from thread" <<
-              std::this_thread::get_id() <<
-              "Current counter is: " << counter << std::endl;
-
-    std::this_thread::sleep_for(10s);
-  }
-}
+#include "lib.hpp"
 
 int main()
 {
-  std::cout << "Program has been started" << std::endl;
+#ifdef THIS_IS_LINUX
+  std::cout << "Program has been started on Linux" << std::endl;
+#else
+  std::cout << "Program has been started on Windows" << std::endl;
+#endif
 
-  std::thread thread(thread_func);
-  thread.join();
+  do_some_stuff();
+  print_message("Hello world");
+  send_message("Hi!");
 
-  return 0;
+  return 1;
 }
