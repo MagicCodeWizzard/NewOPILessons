@@ -18,5 +18,5 @@ int main()
   print_message("Hello world");
   send_message("Hi!");
 
-  return 1;
+  return 0;
 }
