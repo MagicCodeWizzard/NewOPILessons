@@ -28,4 +28,4 @@ jobs:
       run: ls -laR ${{github.workspace}}
 
     - name: Test run
-      run: ${{github.workspace}}/build/${{env.BUILD_TYPE}}/MyAwesomeProgram
+      run: ${{github.workspace}}/build/MyAwesomeProgram
