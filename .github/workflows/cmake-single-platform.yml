@@ -24,5 +24,8 @@ jobs:
     - name: Build via CMake
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
+    - name: List directories
+      run: ls -laR ${{github.workspace}}
+
     - name: Test run
       run: ${{github.workspace}}/build/${{env.BUILD_TYPE}}/MyAwesomeProgram
