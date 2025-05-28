@@ -40,3 +40,5 @@ endif()
 foreach(a ${SOURSES})
     message("Зараз працюємо над файлом: '${a}'")
 endforeach()
+
+add_subdirectory("game")
