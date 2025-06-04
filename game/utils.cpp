@@ -16,7 +16,12 @@ bool loadConfiration(const std::string& path)
     std::string data;
     file >> data;
     if (!data.empty()) {
-        fieldSize = std::atoi(data.c_str());
+        try {
+            fieldSize = std::stoi(data);
+        } catch(...) {
+            file.close();
+            return false;
+        }
     } else {
         file.close();
         return false;
